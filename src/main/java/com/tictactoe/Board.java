@@ -63,7 +63,7 @@ public class Board {
 
     public boolean checkWin(String value) {
         
-        if ((cells[0][0].equals(value) && cells[0][1].equals(value) && cells[0][2].equals(value))||
+        if  ((cells[0][0].equals(value) && cells[0][1].equals(value) && cells[0][2].equals(value))||
             (cells[1][0].equals(value) && cells[1][1].equals(value) && cells[1][2].equals(value))|| 
             (cells[2][0].equals(value) && cells[2][1].equals(value) && cells[2][2].equals(value))|| 
 
@@ -78,9 +78,12 @@ public class Board {
         }
             else{return false;}
     }
-
-    public void checkFullBoard() {}
+    public void checkFullBoard() {
+        
+    }
 
 }
+
+
 
 
