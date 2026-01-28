@@ -16,172 +16,6 @@ public class Board {
     public static final String BOLD = "\u001B[1m";
     public static final String UNDERLINE = "\u001B[4m";
 
-    // public void printBoard() {
-    // System.out.print(RED + "=");
-    // System.out.print(GREEN + "=");
-    // System.out.print(BLUE + "=");
-    // System.out.print(YELLOW + "=");
-    // System.out.print(RED + "=");
-    // System.out.print(GREEN + "=");
-    // System.out.print(BLUE + "=");
-    // System.out.print(YELLOW + "=");
-    // System.out.print(RED + "=");
-    // System.out.print(GREEN + "=");
-    // System.out.print(BLUE + "=");
-    // System.out.print(YELLOW + "=");
-    // System.out.print(RED + "=");
-    // System.out.print(GREEN + "=");
-    // System.out.print(BLUE + "=");
-    // System.out.print(YELLOW + "=");
-    // System.out.print(RED + "=");
-    // System.out.print(GREEN + "=");
-    // System.out.print(BLUE + "=");
-    // System.out.print(YELLOW + "=");
-    // System.out.print(RED + "=");
-    // System.out.print(GREEN + "=");
-    // System.out.print(BLUE + "=");
-    // System.out.print(YELLOW + "=");
-    // System.out.print(RED + "=");
-    // System.out.print(GREEN + "=");
-    // System.out.print(BLUE + "=");
-    // System.out.print(YELLOW + "=");
-    // System.out.print(RED + "=");
-    // System.out.print(GREEN + "=");
-    // System.out.print(BLUE + "=");
-    // System.out.print(YELLOW + "=");
-    // System.out.print(RED + "=");
-    // System.out.print(GREEN + "=");
-    // System.out.print(BLUE + "=");
-    // System.out.print(YELLOW + "=");
-    // System.out.println(RED + "=");
-    // System.out.println(BOLD + BLUE + "| | | |");
-    // System.out.println(BOLD + GREEN + "| " + cells[0][0] + " | " + cells[0][1] +
-    // " | "
-    // + cells[0][2] + " |");
-    // System.out.println(BOLD + RED + "| | | |");
-    // System.out.print(RED + "-");
-    // System.out.print(GREEN + "-");
-    // System.out.print(BLUE + "-");
-    // System.out.print(YELLOW + "-");
-    // System.out.print(RED + "-");
-    // System.out.print(GREEN + "-");
-    // System.out.print(BLUE + "-");
-    // System.out.print(YELLOW + "-");
-    // System.out.print(RED + "-");
-    // System.out.print(GREEN + "-");
-    // System.out.print(BLUE + "-");
-    // System.out.print(YELLOW + "-");
-    // System.out.print(RED + "+");
-    // System.out.print(GREEN + "-");
-    // System.out.print(BLUE + "-");
-    // System.out.print(YELLOW + "-");
-    // System.out.print(RED + "-");
-    // System.out.print(GREEN + "-");
-    // System.out.print(BLUE + "-");
-    // System.out.print(YELLOW + "-");
-    // System.out.print(RED + "-");
-    // System.out.print(GREEN + "-");
-    // System.out.print(BLUE + "-");
-    // System.out.print(YELLOW + "-");
-    // System.out.print(RED + "+");
-    // System.out.print(GREEN + "-");
-    // System.out.print(BLUE + "-");
-    // System.out.print(YELLOW + "-");
-    // System.out.print(RED + "-");
-    // System.out.print(GREEN + "-");
-    // System.out.print(BLUE + "-");
-    // System.out.print(YELLOW + "-");
-    // System.out.print(RED + "-");
-    // System.out.print(GREEN + "-");
-    // System.out.print(BLUE + "-");
-    // System.out.print(YELLOW + "-");
-    // System.out.println(RED + "-");
-    // System.out.println(BOLD + BLUE + "| | | |");
-    // System.out.println(BOLD + GREEN + "| " + cells[1][0] + " | " + cells[1][1] +
-    // " | "
-    // + cells[1][2] + " |");
-    // System.out.println(BOLD + RED + "| | | |");
-    // System.out.print(RED + "-");
-    // System.out.print(GREEN + "-");
-    // System.out.print(BLUE + "-");
-    // System.out.print(YELLOW + "-");
-    // System.out.print(RED + "-");
-    // System.out.print(GREEN + "-");
-    // System.out.print(BLUE + "-");
-    // System.out.print(YELLOW + "-");
-    // System.out.print(RED + "-");
-    // System.out.print(GREEN + "-");
-    // System.out.print(BLUE + "-");
-    // System.out.print(YELLOW + "-");
-    // System.out.print(RED + "+");
-    // System.out.print(GREEN + "-");
-    // System.out.print(BLUE + "-");
-    // System.out.print(YELLOW + "-");
-    // System.out.print(RED + "-");
-    // System.out.print(GREEN + "-");
-    // System.out.print(BLUE + "-");
-    // System.out.print(YELLOW + "-");
-    // System.out.print(RED + "-");
-    // System.out.print(GREEN + "-");
-    // System.out.print(BLUE + "-");
-    // System.out.print(YELLOW + "-");
-    // System.out.print(RED + "+");
-    // System.out.print(GREEN + "-");
-    // System.out.print(BLUE + "-");
-    // System.out.print(YELLOW + "-");
-    // System.out.print(RED + "-");
-    // System.out.print(GREEN + "-");
-    // System.out.print(BLUE + "-");
-    // System.out.print(YELLOW + "-");
-    // System.out.print(RED + "-");
-    // System.out.print(GREEN + "-");
-    // System.out.print(BLUE + "-");
-    // System.out.print(YELLOW + "-");
-    // System.out.println(RED + "-");
-    // System.out.println(BOLD + BLUE + "| | | |");
-    // System.out.println(BOLD + GREEN + "| " + cells[2][0] + " | " + cells[2][1] +
-    // " | "
-    // + cells[2][2] + " |");
-    // System.out.println(BOLD + RED + "| | | |");
-    // System.out.print(RED + "=");
-    // System.out.print(GREEN + "=");
-    // System.out.print(BLUE + "=");
-    // System.out.print(YELLOW + "=");
-    // System.out.print(RED + "=");
-    // System.out.print(GREEN + "=");
-    // System.out.print(BLUE + "=");
-    // System.out.print(YELLOW + "=");
-    // System.out.print(RED + "=");
-    // System.out.print(GREEN + "=");
-    // System.out.print(BLUE + "=");
-    // System.out.print(YELLOW + "=");
-    // System.out.print(RED + "=");
-    // System.out.print(GREEN + "=");
-    // System.out.print(BLUE + "=");
-    // System.out.print(YELLOW + "=");
-    // System.out.print(RED + "=");
-    // System.out.print(GREEN + "=");
-    // System.out.print(BLUE + "=");
-    // System.out.print(YELLOW + "=");
-    // System.out.print(RED + "=");
-    // System.out.print(GREEN + "=");
-    // System.out.print(BLUE + "=");
-    // System.out.print(YELLOW + "=");
-    // System.out.print(RED + "=");
-    // System.out.print(GREEN + "=");
-    // System.out.print(BLUE + "=");
-    // System.out.print(YELLOW + "=");
-    // System.out.print(RED + "=");
-    // System.out.print(GREEN + "=");
-    // System.out.print(BLUE + "=");
-    // System.out.print(YELLOW + "=");
-    // System.out.print(RED + "=");
-    // System.out.print(GREEN + "=");
-    // System.out.print(BLUE + "=");
-    // System.out.print(YELLOW + "=");
-    // System.out.println(RED + "=" + RESET);
-    // }
-
     private void drawRows(String symbol, String connector) {
         String[] colors = { RED, GREEN, BLUE, YELLOW };
 
@@ -224,30 +58,32 @@ public class Board {
         if (cells [r][c].equals(" ")){
             return true;
         }
-            else{return false};
+            else{return false;}
     }
 
-    public boolean checkWin() {
+    public boolean checkWin(String value) {
         
-        if  ((cells[0][0] && cells[0][1] && cells[0][2])||
-            (cells[1][0] && cells[1][1] && cells[1][2])|| 
-            (cells[2][0] && cells[2][1] && cells[2][2])|| 
+        if  ((cells[0][0].equals(value) && cells[0][1].equals(value) && cells[0][2].equals(value))||
+            (cells[1][0].equals(value) && cells[1][1].equals(value) && cells[1][2].equals(value))|| 
+            (cells[2][0].equals(value) && cells[2][1].equals(value) && cells[2][2].equals(value))|| 
 
-            (cells[0][0] && cells[1][0] && cells[2][0])|| 
-            (cells[0][1] && cells[1][1] && cells[2][1])|| 
-            (cells[0][2] && cells[1][2] && cells[2][2])|| 
+            (cells[0][0].equals(value) && cells[1][0].equals(value) && cells[2][0].equals(value))|| 
+            (cells[0][1].equals(value) && cells[1][1].equals(value) && cells[2][1].equals(value))|| 
+            (cells[0][2].equals(value) && cells[1][2].equals(value) && cells[2][2].equals(value))|| 
 
+            (cells[0][0].equals(value) && cells[1][1].equals(value) && cells[2][2].equals(value))|| 
+            (cells[0][2].equals(value) && cells[1][1].equals(value) && cells[2][0].equals(value))){
 
-            (cells[0][0] && cells[1][1] && cells[2][2])|| 
-            (cells[0][2] && cells[1][1] && cells[2][0])){
                 return true;
         }
-            else{return false};
+            else{return false;}
     }
-
-    }
-
     public void checkFullBoard() {
-
+        
     }
+
+}
+
+
+
 

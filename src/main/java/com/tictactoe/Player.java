@@ -4,7 +4,7 @@ public class Player {
 
     private String name;
     private String rol;// investigar enums añadimos color
-    private int win;
+    private boolean win;
 
     // Constructors
 
@@ -31,14 +31,17 @@ public class Player {
         this.rol = rol;
     }
 
-    public int getWin() {
+    public boolean getWin() {
         return this.win;
     }
 
-    public void setWin(int win) {
+    public void setWin(boolean win) {
         this.win = win;
     }
 
+    public void isWin() {
+        this.win = true;
+    }
     
     // Methods 
 

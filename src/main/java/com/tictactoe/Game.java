@@ -42,6 +42,7 @@ public class Game {
 
         //métodos
     public void rules(){
+        // design a mini tablero here ?
 
     }
 
