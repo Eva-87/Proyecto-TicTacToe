@@ -1,6 +1,6 @@
 package com.tictactoe;
 
-public class Players {
+public class Player {
 
     private String name;
     private String rol;// investigar enums añadimos color
@@ -8,7 +8,7 @@ public class Players {
 
     // Constructors
 
-    public Players(String name) {
+    public Player(String name) {
         this.name = name;
     }
 
@@ -46,6 +46,7 @@ public class Players {
 
                 //addMove()
                 //checkCell()
+                //cambiar aqui el jugador que juega? (pasar la pelota)
     }
 
 }
