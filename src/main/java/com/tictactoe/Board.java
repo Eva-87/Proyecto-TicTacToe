@@ -224,30 +224,30 @@ public class Board {
         if (cells [r][c].equals(" ")){
             return true;
         }
-            else{return false};
+            else{return false;}
     }
 
-    public boolean checkWin() {
+    public boolean checkWin(String value) {
         
-        if  ((cells[0][0] && cells[0][1] && cells[0][2])||
-            (cells[1][0] && cells[1][1] && cells[1][2])|| 
-            (cells[2][0] && cells[2][1] && cells[2][2])|| 
+        if  ((cells[0][0].equals(value) && cells[0][1].equals(value) && cells[0][2].equals(value))||
+            (cells[1][0].equals(value) && cells[1][1].equals(value) && cells[1][2].equals(value))|| 
+            (cells[2][0].equals(value) && cells[2][1].equals(value) && cells[2][2].equals(value))|| 
 
-            (cells[0][0] && cells[1][0] && cells[2][0])|| 
-            (cells[0][1] && cells[1][1] && cells[2][1])|| 
-            (cells[0][2] && cells[1][2] && cells[2][2])|| 
+            (cells[0][0].equals(value) && cells[1][0].equals(value) && cells[2][0].equals(value))|| 
+            (cells[0][1].equals(value) && cells[1][1].equals(value) && cells[2][1].equals(value))|| 
+            (cells[0][2].equals(value) && cells[1][2].equals(value) && cells[2][2].equals(value))|| 
 
+            (cells[0][0].equals(value) && cells[1][1].equals(value) && cells[2][2].equals(value))|| 
+            (cells[0][2].equals(value) && cells[1][1].equals(value) && cells[2][0].equals(value))){
 
-            (cells[0][0] && cells[1][1] && cells[2][2])|| 
-            (cells[0][2] && cells[1][1] && cells[2][0])){
                 return true;
         }
-            else{return false};
-    }
+            else{return false;}
 
     }
 
     public void checkFullBoard() {
 
     }
+}
 
