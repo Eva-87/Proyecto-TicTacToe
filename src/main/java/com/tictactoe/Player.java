@@ -1,9 +1,12 @@
 package com.tictactoe;
 
+import java.util.Scanner;
+
 public class Player {
 
     private String name;
     private String rol;// investigar enums añadimos color
+    private String colour;
     private boolean win;
 
     // Constructors
@@ -39,14 +42,24 @@ public class Player {
         this.win = win;
     }
 
+    public String getColour() {
+        return this.colour;
+    }
+
+    public void setColour(String colour) {
+        this.colour = colour;
+    }
+
+
+
     
     // Methods 
 
-    public void move(){
-
-                //addMove()
-                //checkCell()
-                //cambiar aqui el jugador que juega? (pasar la pelota)
+    public String move(Scanner scan){
+            System.out.println("jugador "+this.name +"inserta coordenadas");
+            String range= scan.nextLine();
+            return range;
+               
     }
 
 }

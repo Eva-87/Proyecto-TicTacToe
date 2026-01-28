@@ -220,7 +220,9 @@ public class Board {
 
     }
 
-    public boolean checkCell(int r, int c) {
+    public boolean checkCell(int[] coordinate) {
+        int r = coordinate[0];
+        int c = coordinate[1];
         if (cells [r][c].equals(" ")){
             return true;
         }
@@ -246,8 +248,8 @@ public class Board {
 
     }
 
-    public void checkFullBoard() {
-
-    }
+   // public void checkFullBoard() {
+        
+  //  }
 }
 
