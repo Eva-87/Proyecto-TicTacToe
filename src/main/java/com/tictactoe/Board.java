@@ -184,7 +184,7 @@ public class Board {
 
     private void drawRows(String symbol, String connector) {
         String[] colors = { RED, GREEN, BLUE, YELLOW };
-        
+
         System.out.print("    ");
         for (int r = 0; r < 37; r++) {
             if (r == 12 || r == 24) {
@@ -200,15 +200,18 @@ public class Board {
         System.out.println(CYAN + BOLD + "           A           B           C" + RESET);
         drawRows("=", "=");
         System.out.println(BOLD + BLUE + "    |           |           |           |");
-        System.out.println(CYAN + BOLD + " 1  " + GREEN + "|     " + cells[0][0] + "     |     " + cells[0][1] + "     |     " + cells[0][2] + "     |");
+        System.out.println(CYAN + BOLD + " 1  " + GREEN + "|     " + cells[0][0] + "     |     " + cells[0][1]
+                + "     |     " + cells[0][2] + "     |");
         System.out.println(BOLD + RED + "    |           |           |           |");
         drawRows("-", "+");
         System.out.println(BOLD + BLUE + "    |           |           |           |");
-        System.out.println(CYAN + BOLD + " 2  " + GREEN + "|     " + cells[1][0] + "     |     " + cells[1][1] + "     |     " + cells[1][2] + "     |");
+        System.out.println(CYAN + BOLD + " 2  " + GREEN + "|     " + cells[1][0] + "     |     " + cells[1][1]
+                + "     |     " + cells[1][2] + "     |");
         System.out.println(BOLD + RED + "    |           |           |           |");
         drawRows("-", "+");
         System.out.println(BOLD + BLUE + "    |           |           |           |");
-        System.out.println(CYAN + BOLD + " 3  " + GREEN + "|     " + cells[2][0] + "     |     " + cells[2][1] + "     |     " + cells[2][2] + "     |");
+        System.out.println(CYAN + BOLD + " 3  " + GREEN + "|     " + cells[2][0] + "     |     " + cells[2][1]
+                + "     |     " + cells[2][2] + "     |");
         System.out.println(BOLD + RED + "    |           |           |           |");
         drawRows("=", "=");
     }
@@ -217,11 +220,30 @@ public class Board {
 
     }
 
-    public void checkCell() {
-
+    public boolean checkCell(int r, int c) {
+        if (cells [r][c].equals(" ")){
+            return true;
+        }
+            else{return false};
     }
 
-    public void checkWin() {
+    public boolean checkWin() {
+        
+        if  ((cells[0][0] && cells[0][1] && cells[0][2])||
+            (cells[1][0] && cells[1][1] && cells[1][2])|| 
+            (cells[2][0] && cells[2][1] && cells[2][2])|| 
+
+            (cells[0][0] && cells[1][0] && cells[2][0])|| 
+            (cells[0][1] && cells[1][1] && cells[2][1])|| 
+            (cells[0][2] && cells[1][2] && cells[2][2])|| 
+
+
+            (cells[0][0] && cells[1][1] && cells[2][2])|| 
+            (cells[0][2] && cells[1][1] && cells[2][0])){
+                return true;
+        }
+            else{return false};
+    }
 
     }
 
