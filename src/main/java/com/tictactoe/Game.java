@@ -7,9 +7,37 @@ public class Game {
     private Board Board;
 
     //Constructor
-    public Game(){}
+    public Game(){
+
+        Board board = new Board();
+        this.Board = board;
+    }
 
         //Getters &setters
+
+    public Player getPlayerX() {
+        return this.PlayerX;
+    }
+
+    public void setPlayerX(Player PlayerX) {
+        this.PlayerX = PlayerX;
+    }
+
+    public Player getPlayerO() {
+        return this.PlayerO;
+    }
+
+    public void setPlayerO(Player PlayerO) {
+        this.PlayerO = PlayerO;
+    }
+
+    public Board getBoard() {
+        return this.Board;
+    }
+
+    public void setBoard(Board Board) {
+        this.Board = Board;
+    }
 
 
         //métodos
