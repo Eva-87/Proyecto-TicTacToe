@@ -51,9 +51,9 @@ public class Game {
         String rules = """
                 
                     1. Existen 2 jugadores (X - O).
-                    2. Se juega en un tablero de 3x3 con coordenadas; el jugador X empieza.
+                    2. Se juega en un tablero de 3x3 con coordenadas A B C - 1 2 3; el jugador X empieza.
                     3. El formato válido de las coordenadas será Letra Numero, ejemplo A1, B3, etc.
-                    4. Se procedera por turnos, el primer jugador colacará su ficha y pasará el turno al siguiente.
+                    4. Se procederá por turnos, el primer jugador colacará su ficha y pasará el turno al siguiente.
                     5. Un jugador gana si consigue tres X o tres O en línea vertical, horizontal o diagonal.
                     6. Si se acaban los espacios del tablero y no se consigue la victoria, se considerará un empate.
                 """;
@@ -62,8 +62,8 @@ public class Game {
 
     public void designatePlayers(Player Player1, Player Player2, Scanner scan) {
 
-        System.out.println("\nBien, veamos quien va a empezar... Mejor dejarlo al azar...");
-        System.out.print("Toca el ENTER para lanzar una moneda");
+        System.out.println("\nBien, veamos quien va a empezar... Mejor que decida el azar...");
+        System.out.print("\nPulsa ENTER para lanzar la moneda.");
         scan.nextLine();
 
         int choice = (int) (Math.random() * 2);
@@ -83,8 +83,8 @@ public class Game {
             Player2.setColor(Colors.YELLOW);
             setPlayerO(Player1);
         }
-        System.out.println("\nLa suerte ha decidido que... " + Player1.getColor() + Player1.getName() + Colors.RESET + " jugará con el " + Player1.getColor() + Player1.getRol() + Colors.RESET +
-                ", y " + Player2.getColor() + Player2.getName() + Colors.RESET + " jugará con el "+ Player2.getColor() + Player2.getRol() + Colors.RESET +
+        System.out.println("\nLa suerte ha decidido que... " + Player1.getColor() + Player1.getName() + Colors.RESET + " jugará con " + Player1.getColor() + Player1.getRol() + Colors.RESET +
+                ", y " + Player2.getColor() + Player2.getName() + Colors.RESET + " jugará con "+ Player2.getColor() + Player2.getRol() + Colors.RESET +
                 ". " + PlayerX.getColor()  + PlayerX.getName() + Colors.RESET + " empieza.");
         System.out.println("\nPues parece que estamos listos. ¡Empezamos!");
 
@@ -152,15 +152,13 @@ public class Game {
                         if (Board.checkWin(currentPlayer.getRol())) {
                             currentPlayer.isWinner();
                             Counter.addCounter();
-                            System.out.println(currentPlayer.getName()+currentPlayer.getWin()+ PlayerX.getWin()+PlayerO.getWin()+Player1.getWin()+Player2.getWin());
                             System.out.println(Colors.GREEN + "\nGana " + currentPlayer.getName() + "!" + Colors.RESET);
                             gameFinished = true;
 
                         } else if (Board.checkFullBoard()) {
                             fullBoard();
                             gameFinished = true;
-                            Counter.addCounter();;
-
+                            Counter.addCounter();
                         } else {
                             if (currentPlayer.equals(PlayerX)) {
                                 currentPlayer = PlayerO;
@@ -173,7 +171,7 @@ public class Game {
                     }
                 }
             }
-            System.out.println("\nOtra partida? (S/N)");
+            System.out.print("\nOtra partida? (S/N)");
             String response = scan.nextLine();
 
             if (!response.equalsIgnoreCase("S")) {

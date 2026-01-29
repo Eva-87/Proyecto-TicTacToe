@@ -59,7 +59,7 @@ public class Player {
     // Methods 
 
     public String move(Scanner scan){
-            System.out.println(this.name +", inserta coordenadas:");
+            System.out.print(this.name +", inserta las coordenadas:");
             String range= scan.nextLine();
             return range;
     }

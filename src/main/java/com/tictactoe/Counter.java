@@ -45,18 +45,18 @@ public Counter(Player p1, Player p2){
     public void counter(){
         int draw = counter - Player1.getWin()-Player2.getWin();
         
-        System.out.println("Tras un total de "+ counter +" partidas realizadas:\n" +
+        System.out.println("\nTras un total de "+ counter +" partidas realizadas:\n\n" +
          Player1.getName() + " ha obtenido un total de "+ Player1.getWin() + " victorias.\n" +
          Player2.getName() + " ha obtendio un total de " + Player2.getWin() + " victorias.\n" +
-         "ha habido empate en " + draw + " ocasiones.\n");
+         "\nHa habido empate en " + draw + " ocasiones.\n");
             if(Player1.getWin()<Player2.getWin()){
-                System.out.println("¡El ganador definitivo es "+ Player2.getName()+ "!\n");
+                System.out.println(Colors.GREEN +"¡El ganador definitivo es "+ Player2.getName()+ "!\n" + Colors.RESET);
             } else if(Player1.getWin()>Player2.getWin()){
-                 System.out.println("¡El ganador definitivo es "+ Player1.getName()+ "!\n");
+                 System.out.println(Colors.GREEN + "¡El ganador definitivo es "+ Player1.getName()+ "!\n" + Colors.RESET);
             }else{
-                System.out.println("Ambos jugadores han obtenido las mismas victorias.");
+                System.out.println(Colors.YELLOW + "Ambos jugadores han obtenido las mismas victorias.\n" + Colors.RESET);
             }
 
-            System.out.println("Gracias por jugar. Hasta la próxima."); 
+            System.out.println("Gracias por jugar. ¡Hasta la próxima!"); 
     }
 }
