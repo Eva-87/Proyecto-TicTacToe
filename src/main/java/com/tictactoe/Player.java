@@ -6,7 +6,7 @@ public class Player {
     private String name;
     private String rol;
     private String color;
-    private boolean win;
+    private int win;
 
     
     // Constructors
@@ -42,12 +42,15 @@ public class Player {
         this.color =  color;
     }
 
-   public boolean getWin() {
+   public int getWin() {
         return this.win;
     }
 
-    public void setWin(boolean win) {
+    public void setWin(int win) {
         this.win = win;
+    }
+    public void isWinner(){
+        this.win = win+1;
     }
 
     
