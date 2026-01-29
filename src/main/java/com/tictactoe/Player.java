@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Player {
 
     private String name;
-    private String rol;
+    private String[][] rol;
     private String color;
     private boolean win;
 
@@ -27,11 +27,11 @@ public class Player {
         this.name = name;
     }
 
-    public String getRol() {
+    public String[][] getRol() {
         return this.rol;
     }
 
-    public void setRol(String rol) {
+    public void setRol(String[][] rol) {
         this.rol = rol;
     }
 

@@ -67,8 +67,9 @@ public class Game {
 
         int choice = (int) (Math.random() * 2);
         if (choice == 0) {
-            player1.setRol("X");
+            
             player1.setColor(Colors.YELLOW);
+            player1.setRol(player1.getColor() + "X" + Colors.RESET);
             setPlayerX(player1);
             player2.setRol("O");
             player2.setColor(Colors.PURPLE);
