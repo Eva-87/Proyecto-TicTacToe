@@ -25,23 +25,25 @@ public class Board {
     }
 
     public void printBoard() {
-        System.out.println(Colors.CYAN + Colors.BOLD + "           A           B           C" + Colors.RESET);
+        System.out.println(" ");
+        System.out.println(Colors.CYAN + Colors.BOLD + "\n           A           B           C" + Colors.RESET);
         drawRows("=", "=");
         System.out.println(Colors.BOLD + Colors.BLUE + "    |           |           |           |");
-        System.out.println(Colors.CYAN + Colors.BOLD + " 1  " + Colors.GREEN + "|     " + cells[0][0] + "     |     " + cells[0][1]
-                + "     |     " + cells[0][2] + "     |");
+        System.out.println(Colors.CYAN + Colors.BOLD + " 1  " + Colors.GREEN + "|     " + cells[0][0] + Colors.GREEN + Colors.BOLD + "     |     " + cells[0][1]
+                + Colors.GREEN + Colors.BOLD + "     |     " + cells[0][2] + Colors.GREEN + Colors.BOLD + "     |");
         System.out.println(Colors.BOLD + Colors.RED + "    |           |           |           |");
         drawRows("-", "+");
         System.out.println(Colors.BOLD + Colors.BLUE + "    |           |           |           |");
-        System.out.println(Colors.CYAN + Colors.BOLD + " 2  " + Colors.GREEN + "|     " + cells[1][0] + "     |     " + cells[1][1]
-                + "     |     " + cells[1][2] + "     |");
+        System.out.println(Colors.CYAN + Colors.BOLD + " 2  " + Colors.GREEN + "|     " + cells[1][0] + Colors.GREEN + Colors.BOLD + "     |     " + cells[1][1]
+                + Colors.GREEN + Colors.BOLD + "     |     " + cells[1][2] + Colors.GREEN + Colors.BOLD + "     |");
         System.out.println(Colors.BOLD + Colors.RED + "    |           |           |           |");
         drawRows("-", "+");
         System.out.println(Colors.BOLD + Colors.BLUE + "    |           |           |           |");
-        System.out.println(Colors.CYAN + Colors.BOLD + " 3  " + Colors.GREEN + "|     " + cells[2][0] + "     |     " + cells[2][1]
-                + "     |     " + cells[2][2] + "     |");
+        System.out.println(Colors.CYAN + Colors.BOLD + " 3  " + Colors.GREEN + "|     " + cells[2][0] + Colors.GREEN + Colors.BOLD + "     |     " + cells[2][1]
+                + Colors.GREEN + Colors.BOLD + "     |     " + cells[2][2] + Colors.GREEN + Colors.BOLD + "     |");
         System.out.println(Colors.BOLD + Colors.RED + "    |           |           |           |");
         drawRows("=", "=");
+        System.out.println(" ");
     }
 
     public void addMove(int[] coordinate, String symbol) {
