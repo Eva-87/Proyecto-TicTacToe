@@ -8,6 +8,7 @@ public class Game {
     private Player PlayerX;
     private Player PlayerO;
     private Board Board;
+   
 
     // Constructor
 
@@ -68,12 +69,12 @@ public class Game {
         int choice = (int) (Math.random() * 2);
         if (choice == 0) {
             
-            player1.setColor(Colors.YELLOW);
-            player1.setRol(player1.getColor() + "X" + Colors.RESET);
-            setPlayerX(player1);
-            player2.setRol("O");
-            player2.setColor(Colors.PURPLE);
-            setPlayerO(player2);
+            Player1.setColor(Colors.YELLOW);
+            Player1.setRol(Player1.getColor() + "X" + Colors.RESET);
+            setPlayerX(Player1);
+            Player2.setRol("O");
+            Player2.setColor(Colors.PURPLE);
+            setPlayerO(Player2);
         } else {
             Player1.setRol(Colors.PURPLE + Colors.BOLD + "O" + Colors.RESET);
             Player1.setColor(Colors.PURPLE);
@@ -126,7 +127,7 @@ public class Game {
         System.out.println(Colors.GREY + "\nVaya, hay un empate. Nadie ha ganado..." + Colors.RESET);
     }
 
-    public void startGame(Player Player1, Player Player2, Scanner scan) {
+    public void startGame(Player Player1, Player Player2, Scanner scan, Counter Counter) {
         
         boolean playAgain = true;
 
@@ -135,9 +136,9 @@ public class Game {
             Player currentPlayer = PlayerX;
             boolean gameFinished = false;
             Board.resetBoard();
+            Board.printBoard();
 
             while (!gameFinished) {
-                Board.printBoard();
                 String range = currentPlayer.move(scan);
                 if (checkRange(range) == false) {
                     System.out.println(Colors.RED + "\nPor favor ingresa un valor válido (A1, B3)" + Colors.RESET);
@@ -148,14 +149,18 @@ public class Game {
                         Board.addMove(coordinate, currentPlayer.getRol());
                         Board.printBoard();
 
-                        if (Board.checkWin(currentPlayer.getRol()) == true) {
-                            currentPlayer.setWin(true);
+                        if (Board.checkWin(currentPlayer.getRol())) {
+                            currentPlayer.isWinner();
+                            Counter.addCounter();
+                            System.out.println(currentPlayer.getName()+currentPlayer.getWin()+ PlayerX.getWin()+PlayerO.getWin()+Player1.getWin()+Player2.getWin());
                             System.out.println(Colors.GREEN + "\nGana " + currentPlayer.getName() + "!" + Colors.RESET);
                             gameFinished = true;
 
-                        } else if (Board.checkFullBoard() == true) {
+                        } else if (Board.checkFullBoard()) {
                             fullBoard();
                             gameFinished = true;
+                            Counter.addCounter();;
+
                         } else {
                             if (currentPlayer.equals(PlayerX)) {
                                 currentPlayer = PlayerO;
@@ -173,9 +178,8 @@ public class Game {
 
             if (!response.equalsIgnoreCase("S")) {
                 playAgain = false;
-                System.out.println("\nGracias por jugar. Hasta la próxima.");
+                Counter.counter();
             }
         }
     }
-
 }

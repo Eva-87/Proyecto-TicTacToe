@@ -4,9 +4,9 @@ import java.util.Scanner;
 public class Player {
 
     private String name;
-    private String[][] rol;
+    private String rol;
     private String color;
-    private boolean win;
+    private int win;
 
     
     // Constructors
@@ -26,11 +26,11 @@ public class Player {
         this.name = name;
     }
 
-    public String[][] getRol() {
+    public String getRol() {
         return this.rol;
     }
 
-    public void setRol(String[][] rol) {
+    public void setRol(String rol) {
         this.rol = rol;
     }
 
@@ -42,12 +42,15 @@ public class Player {
         this.color =  color;
     }
 
-   public boolean getWin() {
+   public int getWin() {
         return this.win;
     }
 
-    public void setWin(boolean win) {
+    public void setWin(int win) {
         this.win = win;
+    }
+    public void isWinner(){
+        this.win = win+1;
     }
 
     
