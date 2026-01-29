@@ -1,11 +1,17 @@
 package com.tictactoe;
 
-
 public class Board {
+
     private String[][] cells = { { " ", " ", " " }, { " ", " ", " " }, { " ", " ", " " } };
+
+
+    // Constructor
 
     private void drawRows(String symbol, String connector) {
         String[] colors = { Colors.RED, Colors.GREEN, Colors.BLUE, Colors.YELLOW };
+
+    
+    // Methods
 
         System.out.print("    ");
         for (int r = 0; r < 37; r++) {
@@ -77,7 +83,6 @@ public class Board {
                 }
             }
         }
-        System.out.println("Vaya, hay un empate");
         return true;
     }
 

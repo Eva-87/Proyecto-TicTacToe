@@ -22,18 +22,8 @@ public class App
         String name2 = scan.nextLine();
         Player Player2 = new Player(name2);
         System.out.println("\nGenial ! Gracias ! Pues Bienvenida " + Player1.getName() + "! Bienvenida " + Player2.getName() + "! ");
-    
-        
 
-        Game1.startGame(scan);
-
-        
-
-        // Board board = new Board();
-        // board.printBoard();
-
-
-
+        Game1.startGame(Player1, Player2, scan);
 
         scan.close();
     }
