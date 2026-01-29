@@ -1,6 +1,5 @@
 package com.tictactoe;
 import java.util.Scanner;
-import java.util.Objects;
 
 public class Player {
 
@@ -57,7 +56,7 @@ public class Player {
     // Methods 
 
     public String move(Scanner scan){
-            System.out.println("jugador "+this.name +" inserta coordenadas:");
+            System.out.println(this.name +", inserta coordenadas:");
             String range= scan.nextLine();
             return range;
     }

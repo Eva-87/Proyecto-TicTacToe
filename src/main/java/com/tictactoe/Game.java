@@ -1,6 +1,5 @@
 package com.tictactoe;
 
-import java.awt.Color;
 import java.util.List;
 import java.util.Scanner;
 
@@ -49,38 +48,44 @@ public class Game {
     public void rules() {
 
         String rules = """
-                1. Existen 2 jugadores (X - O).
-                2. Se juega en un tablero de 3x3 con coordenadas; el jugador X empieza.
-                3. El formato válido de las coordenadas será Letra Numero, ejemplo A1, B3, etc.
-                3. Se procedera por turnos, el primer jugador colacará su ficha y pasará el turno al siguiente.
-                4. Un jugador gana si consigue tres X o tres O en línea vertical, horizontal o diagonal.
-                5. Si se acaban los espacios del tablero y no se consigue la victoria, se considerará un empate.
+                
+                    1. Existen 2 jugadores (X - O).
+                    2. Se juega en un tablero de 3x3 con coordenadas; el jugador X empieza.
+                    3. El formato válido de las coordenadas será Letra Numero, ejemplo A1, B3, etc.
+                    4. Se procedera por turnos, el primer jugador colacará su ficha y pasará el turno al siguiente.
+                    5. Un jugador gana si consigue tres X o tres O en línea vertical, horizontal o diagonal.
+                    6. Si se acaban los espacios del tablero y no se consigue la victoria, se considerará un empate.
                 """;
         System.out.println(rules);
     }
 
-    public void designatePlayers(Player player1, Player player2, Scanner scan) {
+    public void designatePlayers(Player Player1, Player Player2, Scanner scan) {
 
-        System.out.println("\nBien, veamos quien va a empezar... mejor dejarlo al azar...");
+        System.out.println("\nBien, veamos quien va a empezar... Mejor dejarlo al azar...");
         System.out.print("Toca el ENTER para lanzar una moneda");
         scan.nextLine();
 
         int choice = (int) (Math.random() * 2);
         if (choice == 0) {
-            player1.setRol("X");
-            player1.setColor(Colors.YELLOW);
-            setPlayerX(player1);
-            player2.setRol("O");
-            player2.setColor(Colors.PURPLE);
-            setPlayerO(player2);
+            Player1.setRol(Colors.YELLOW + Colors.BOLD +"X" + Colors.RESET);
+            Player1.setColor(Colors.YELLOW);
+            setPlayerX(Player1);
+            Player2.setRol(Colors.PURPLE + Colors.BOLD + "O" + Colors.RESET);
+            Player2.setColor(Colors.PURPLE);
+            setPlayerO(Player2);
         } else {
-            player1.setRol("O");
-            player1.setColor(Colors.PURPLE);
-            setPlayerX(player2);
-            player2.setRol("X");
-            player2.setColor(Colors.YELLOW);
-            setPlayerO(player1);
+            Player1.setRol(Colors.PURPLE + Colors.BOLD + "O" + Colors.RESET);
+            Player1.setColor(Colors.PURPLE);
+            setPlayerX(Player2);
+            Player2.setRol(Colors.YELLOW + Colors.BOLD + "X" + Colors.RESET);
+            Player2.setColor(Colors.YELLOW);
+            setPlayerO(Player1);
         }
+        System.out.println("\nLa suerte ha decidido que... " + Player1.getColor() + Player1.getName() + Colors.RESET + " jugará con el " + Player1.getColor() + Player1.getRol() + Colors.RESET +
+                ", y " + Player2.getColor() + Player2.getName() + Colors.RESET + " jugará con el "+ Player2.getColor() + Player2.getRol() + Colors.RESET +
+                ". " + PlayerX.getColor()  + PlayerX.getName() + Colors.RESET + " empieza.");
+        System.out.println("\nPues parece que estamos listos. ¡Empezamos!");
+
     }
 
     public boolean checkRange(String range) {
@@ -117,16 +122,11 @@ public class Game {
     }
 
     public void fullBoard() {
-        System.out.println(Colors.GREY + "Vaya, hay un empate" + Colors.RESET);
+        System.out.println(Colors.GREY + "\nVaya, hay un empate. Nadie ha ganado..." + Colors.RESET);
     }
 
     public void startGame(Player Player1, Player Player2, Scanner scan) {
-        designatePlayers(Player1, Player2, scan);
-        System.out.println("\nLa suerte ha decidido que... " + Player1.getName() + "jugará con el " + Player1.getRol()
-                + " y el color " + Player1.getColor() + ",y " + Player2.getName() + "jugará con el " + Player2.getRol()
-                + " y el color " + Player2.getColor() + ". " + getPlayerX() + " empieza.");
-        System.out.println("Pues parece que estamos listos. ¡Empezamos!");
-
+        
         boolean playAgain = true;
 
         while (playAgain == true) {
@@ -139,7 +139,7 @@ public class Game {
                 Board.printBoard();
                 String range = currentPlayer.move(scan);
                 if (checkRange(range) == false) {
-                    System.out.println(Colors.RED + "Por favor ingresa un valor válido (A1, B3)" + Colors.RESET);
+                    System.out.println(Colors.RED + "\nPor favor ingresa un valor válido (A1, B3)" + Colors.RESET);
                 } else {
                     int[] coordinate = translateRange(range);
 
@@ -149,7 +149,7 @@ public class Game {
 
                         if (Board.checkWin(currentPlayer.getRol()) == true) {
                             currentPlayer.setWin(true);
-                            System.out.println(Colors.GREEN + "Gana " + currentPlayer.getName() + "!" + Colors.RESET);
+                            System.out.println(Colors.GREEN + "\nGana " + currentPlayer.getName() + "!" + Colors.RESET);
                             gameFinished = true;
 
                         } else if (Board.checkFullBoard() == true) {
@@ -163,16 +163,16 @@ public class Game {
                             }
                         }
                     } else {
-                        System.out.println(Colors.RED + "Esa casilla está ocupada, ingresa otra." + Colors.RESET);
+                        System.out.println(Colors.RED + "\nEsa casilla está ocupada, ingresa otra." + Colors.RESET);
                     }
                 }
             }
-            System.out.println("Otra partida? (S/N)");
+            System.out.println("\nOtra partida? (S/N)");
             String response = scan.nextLine();
 
             if (!response.equalsIgnoreCase("S")) {
                 playAgain = false;
-                System.out.println("Gracias por jugar. Hasta la próxima.");
+                System.out.println("\nGracias por jugar. Hasta la próxima.");
             }
         }
     }
