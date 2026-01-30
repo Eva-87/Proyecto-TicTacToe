@@ -30,7 +30,7 @@ public class PlayerTest {
     String fakeIn2 = "A2";
     Scanner fakeScanner1 = new Scanner(fakeIn1);
     Scanner fakeScanner2 = new Scanner(fakeIn2);
-
+ 
     String result1 = player.move(fakeScanner1);
     String result2 = player.move(fakeScanner2);
 

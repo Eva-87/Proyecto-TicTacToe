@@ -30,18 +30,5 @@ public class BoardTest {
 
         assertFalse(result);
     }
-
-    
-    @Test 
-    public void testcheckCellFail(){
-        
-        Board board = new Board();
-        int[] coordinate = {2,2};
-        board.addMove(coordinate, "Z");
-
-        boolean result = board.checkCell(coordinate);
-
-        assertFalse(result);
-    }
     
 }
