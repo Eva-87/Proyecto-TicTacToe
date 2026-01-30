@@ -78,7 +78,7 @@ El proyecto incluye diagramas de arquitectura y flujo creados con **Lucidchart**
 - Manon Godfroy
 - María Eva Martín
 - Guadalupe Peña
-- Ingrid
+- Ingrid Lopez
 
 ---
 
