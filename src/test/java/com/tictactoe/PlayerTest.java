@@ -7,8 +7,6 @@ import org.junit.Test;
 
 public class PlayerTest {
 
-    // move()
-
     @Test
     public void testPlayerMove(){
 
@@ -20,7 +18,6 @@ public class PlayerTest {
 
     assertEquals("A1", result);
     }
-
 
     @Test
     public void testDiffMoves(){
@@ -35,6 +32,5 @@ public class PlayerTest {
     String result2 = player.move(fakeScanner2);
 
     assertNotEquals(result1,result2);
-    }
-    
+    }  
 }

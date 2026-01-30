@@ -4,13 +4,8 @@ public class Board {
 
     private String[][] cells = { { " ", " ", " " }, { " ", " ", " " }, { " ", " ", " " } };
 
-
-    // Constructor
-
     public Board() {
     }
-
-    // Methods
 
     private void drawRows(String symbol, String connector) {
         String[] colors = { Colors.RED, Colors.GREEN, Colors.BLUE, Colors.YELLOW };

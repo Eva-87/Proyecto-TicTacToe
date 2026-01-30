@@ -6,17 +6,11 @@ public class Counter {
     private Player Player2;
     private int counter;
 
-
-//Constructor
-
 public Counter(Player p1, Player p2){
     this.Player1 = p1;
     this.Player2 = p2;
     this.counter = 0;
 }
-
-
-// Getters&Setters
 
     public Player getPlayer1() {
         return this.Player1;
@@ -45,9 +39,6 @@ public Counter(Player p1, Player p2){
     public void addCounter(){
         this.counter = counter+1;
     }
-
-
-    // Methods
 
     public void counter(){
         int draw = counter - Player1.getWin()-Player2.getWin();

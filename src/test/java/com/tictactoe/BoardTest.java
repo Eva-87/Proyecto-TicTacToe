@@ -5,8 +5,6 @@ import org.junit.Test;
 
 public class BoardTest {
 
-    // checkCell()
-
     @Test 
     public void testcheckCellDisp(){
         
@@ -18,7 +16,6 @@ public class BoardTest {
         assertTrue(result);
     }
 
-
     @Test 
     public void testcheckCellNotDisp(){
         
@@ -29,6 +26,5 @@ public class BoardTest {
         boolean result = board.checkCell(coordinate);
 
         assertFalse(result);
-    }
-    
+    } 
 }

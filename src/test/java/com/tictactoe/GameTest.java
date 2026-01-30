@@ -5,9 +5,6 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class GameTest {
-    
-
-    // checkRange()
 
     @Test
     public void testInRange(){
@@ -18,7 +15,6 @@ public class GameTest {
         boolean result = game.checkRange(rangeIn);
 
         assertTrue(result);
-
     }
 
     @Test
@@ -30,12 +26,7 @@ public class GameTest {
         boolean result = game.checkRange(rangeOut);
 
         assertFalse(result);
-
     }
-
-
-
-    // translateRange()
 
     @Test
     public void testTranslateIsInRange(){
@@ -53,5 +44,4 @@ public class GameTest {
     public void testTranslateNotInRange(){
 
     }
-
 }

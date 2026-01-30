@@ -8,15 +8,9 @@ public class Player {
     private String color;
     private int win;
 
-    
-    // Constructors
-
     public Player(String name) {
         this.name = name;
     }
-
-
-    // Getters&Setters
 
     public String getName() {
         return this.name;
@@ -49,9 +43,6 @@ public class Player {
     public void setWin(int win) {
         this.win = win;
     }
-    
-
-    // Methods 
 
     public void isWinner(){
         this.win = win+1;

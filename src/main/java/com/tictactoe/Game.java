@@ -9,16 +9,11 @@ public class Game {
     private Player PlayerO;
     private Board Board;
    
-
-    // Constructor
-
     public Game() {
 
         Board board = new Board();
         this.Board = board;
     }
-
-    // Getters &setters
 
     public Player getPlayerX() {
         return this.PlayerX;
@@ -43,8 +38,6 @@ public class Game {
     public void setBoard(Board Board) {
         this.Board = Board;
     }
-
-    // Methods
 
     public void rules() {
 
@@ -87,7 +80,6 @@ public class Game {
                 ", y " + Player2.getColor() + Player2.getName() + Colors.RESET + " jugará con "+ Player2.getColor() + Player2.getRol() + Colors.RESET +
                 ". " + PlayerX.getColor()  + PlayerX.getName() + Colors.RESET + " empieza.");
         System.out.println("\nPues parece que estamos listos. ¡Empezamos!");
-
     }
 
     public boolean checkRange(String range) {
