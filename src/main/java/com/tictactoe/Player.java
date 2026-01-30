@@ -54,8 +54,6 @@ public class Player {
     }
 
     
-
-    
     // Methods 
 
     public String move(Scanner scan){

@@ -7,12 +7,13 @@ public class Board {
 
     // Constructor
 
-    private void drawRows(String symbol, String connector) {
-        String[] colors = { Colors.RED, Colors.GREEN, Colors.BLUE, Colors.YELLOW };
+    public Board() {
+    }
 
-    
     // Methods
 
+    private void drawRows(String symbol, String connector) {
+        String[] colors = { Colors.RED, Colors.GREEN, Colors.BLUE, Colors.YELLOW };
         System.out.print("    ");
         for (int r = 0; r < 37; r++) {
             if (r == 12 || r == 24) {
