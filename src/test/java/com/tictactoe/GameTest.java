@@ -33,4 +33,25 @@ public class GameTest {
 
     }
 
+
+
+    // translateRange()
+
+    @Test
+    public void testTranslateIsInRange(){
+
+        Game game = new Game();
+        String scanIn = "C3";
+        int[] coordinates = {2, 2};
+
+        int[] result = game.translateRange(scanIn);
+
+        assertArrayEquals(coordinates, result);
+    }
+
+    @Test
+    public void testTranslateNotInRange(){
+
+    }
+
 }

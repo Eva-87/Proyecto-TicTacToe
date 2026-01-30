@@ -49,12 +49,13 @@ public class Player {
     public void setWin(int win) {
         this.win = win;
     }
+    
+
+    // Methods 
+
     public void isWinner(){
         this.win = win+1;
     }
-
-    
-    // Methods 
 
     public String move(Scanner scan){
             System.out.print(this.name +", inserta las coordenadas:");

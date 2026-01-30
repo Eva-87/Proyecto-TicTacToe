@@ -70,9 +70,9 @@ public class Game {
         if (choice == 0) {
             
             Player1.setColor(Colors.YELLOW);
-            Player1.setRol(Player1.getColor() + "X" + Colors.RESET);
+            Player1.setRol( Colors.YELLOW + Colors.BOLD + "X" + Colors.RESET);
             setPlayerX(Player1);
-            Player2.setRol("O");
+            Player2.setRol(Colors.PURPLE + Colors.BOLD + "O" + Colors.RESET );
             Player2.setColor(Colors.PURPLE);
             setPlayerO(Player2);
         } else {

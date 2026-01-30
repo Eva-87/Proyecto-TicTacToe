@@ -1,9 +1,10 @@
 package com.tictactoe;
 
 public class Counter {
-private Player Player1;
-private Player Player2;
-private int counter;
+
+    private Player Player1;
+    private Player Player2;
+    private int counter;
 
 
 //Constructor
